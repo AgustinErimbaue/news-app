@@ -1,7 +1,7 @@
 import React from "react";
 import OIG3 from "../../assets/OIG3.jpg";
 import { Link } from "react-router-dom";
-import './Header.scss'; // Importa el archivo SCSS
+import './Header.scss';
 
 const Header = () => {
   return (

@@ -1,0 +1,32 @@
+.list-news-container {
+    margin-top: 20px;
+  }
+  
+  .list-news-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .list-news-item h3 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .list-news-item p {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  .list-news-item a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .list-news-item a:hover {
+    text-decoration: underline;
+  }
+  
