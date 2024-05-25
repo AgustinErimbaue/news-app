@@ -12,6 +12,10 @@ form {
   align-items: center;
   padding: 20px;
   background-color: $form-background-color;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   input[type="text"] {
     width: 100%;
@@ -23,6 +27,7 @@ form {
 
     &:focus {
       border-color: $input-focus-border-color;
+      outline: none;
     }
   }
 

@@ -11,12 +11,33 @@ const Form = () => {
 
   const navigate = useNavigate();
   const [data, setData] = useState(initialValue);
+  const [message, setMesagge] = useState("");
+  const [btnDisable, setBtnDisable] = useState(true)
 
   const handleInputChange = (e) => {
     setData({
       ...data,
       [e.target.name]: e.target.value,
     });
+  };
+
+  const validateForm = () => {
+    if (!data.Headline || !data.Lead || !data.Body) {
+      setMessage("All fields are required.");
+      setBtnDisabled(true);
+    } else if (data.Headline.length < 3) {
+      setMessage("Headline must be at least 3 characters");
+      setBtnDisabled(true);
+    } else if (data.Lead.length < 3) {
+      setMessage("Lead must be at least 3 characters");
+      setBtnDisabled(true);
+    } else if (data.Body.length < 10) {
+      setMessage("Body must be at least 10 characters");
+      setBtnDisabled(true);
+    } else {
+      setMessage("");
+      setBtnDisabled(false);
+    }
   };
 
   const handleSubmit = (e) => {
