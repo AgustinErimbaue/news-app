@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Form.scss";
 
@@ -11,8 +11,8 @@ const Form = () => {
 
   const navigate = useNavigate();
   const [data, setData] = useState(initialValue);
-  const [message, setMesagge] = useState("");
-  const [btnDisable, setBtnDisable] = useState(true)
+  const [message, setMessage] = useState("");
+  const [btnDisable, setBtnDisabled] = useState(true)
 
   const handleInputChange = (e) => {
     setData({
@@ -39,6 +39,10 @@ const Form = () => {
       setBtnDisabled(false);
     }
   };
+
+  useEffect (() =>{
+    validateForm()
+  },[data])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -77,7 +81,8 @@ const Form = () => {
         onChange={handleInputChange}
         value={data.Body}
       />
-      <button type="submit">Post</button>
+      <button type="submit" disabled={btnDisable}>Post</button>
+      {message && <p className="error-message">{message}</p>}
     </form>
   );
 };

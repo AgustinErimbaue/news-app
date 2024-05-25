@@ -5,6 +5,7 @@ $input-border-color: #ccc;
 $input-focus-border-color: #007bff;
 $button-background-color: #007bff;
 $button-text-color: #fff;
+$error-message-color: #ff0000;
 
 form {
   display: flex;
@@ -12,8 +13,8 @@ form {
   align-items: center;
   padding: 20px;
   background-color: $form-background-color;
-  max-width: 600px;
-  margin: 20px auto;
+  max-width: 500px;
+  margin: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -31,6 +32,13 @@ form {
     }
   }
 
+  .error-message {
+    color: $error-message-color;
+    margin-top: 10px;
+    font-size: 0.9em;
+    text-align: center;
+  }
+
   button {
     padding: 10px 20px;
     background-color: $button-background-color;
@@ -40,8 +48,13 @@ form {
     cursor: pointer;
     transition: background-color 0.3s;
 
-    &:hover {
+    &:hover:enabled {
       background-color: darken($button-background-color, 10%);
+    }
+
+    &:disabled {
+      background-color: lighten($button-background-color, 20%);
+      cursor: not-allowed;
     }
   }
 }
