@@ -1,0 +1,79 @@
+// Footer.scss
+
+$primary-color: #0056b3;
+$secondary-color: #ffffff;
+$background-color: #333333;
+$text-color: #ffffff;
+$link-hover-color: #007bff;
+
+.footer-container {
+  background-color: $background-color;
+  color: $text-color;
+  padding: 20px 0;
+  font-family: 'Roboto', sans-serif;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+
+    .footer-section {
+      margin-bottom: 20px;
+
+      h4 {
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 5px;
+
+          a {
+            color: $text-color;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+              color: $link-hover-color;
+            }
+          }
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    flex-direction: column;
+
+    li {
+      margin-bottom: 5px;
+
+      a {
+        color: $text-color;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    background-color: darken($background-color, 10%);
+  }
+}
