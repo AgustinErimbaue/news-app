@@ -1,5 +1,3 @@
-
-
 $form-background-color: #f9f9f9;
 $input-border-color: #ccc;
 $input-focus-border-color: #007bff;
@@ -19,7 +17,7 @@ form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   input[type="text"] {
-    width: 100%;
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid $input-border-color;
@@ -40,7 +38,10 @@ form {
   }
 
   button {
+    width: 100%;
+    max-width: 200px;
     padding: 10px 20px;
+    margin-top: 10px;
     background-color: $button-background-color;
     color: $button-text-color;
     border: none;
@@ -56,5 +57,15 @@ form {
       background-color: lighten($button-background-color, 20%);
       cursor: not-allowed;
     }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  form {
+    padding: 10px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 20px);
   }
 }
