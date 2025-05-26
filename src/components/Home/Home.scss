@@ -1,0 +1,86 @@
+.newspaper-home {
+  max-width: 900px;
+  margin: 40px auto;
+  background: #f9f6f1;
+  padding: 36px 28px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+  border-radius: 8px;
+  font-family: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+.newspaper-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.newspaper-title {
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #222;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.newspaper-date {
+  font-size: 1.1rem;
+  color: #7a5c1e;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.newspaper-divider {
+  border: none;
+  border-top: 2px solid #d1bfa3;
+  margin: 16px 0;
+}
+
+.newspaper-intro {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.newspaper-intro h2 {
+  font-family: 'Merriweather', 'Georgia', serif;
+  font-size: 1.7rem;
+  color: #b48a3c;
+  margin-bottom: 8px;
+}
+
+.newspaper-intro p {
+  color: #444;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.newspaper-featured {
+  margin-bottom: 32px;
+}
+
+.newspaper-featured h3 {
+  font-size: 1.3rem;
+  color: #222;
+  margin-bottom: 10px;
+  font-family: 'Merriweather', 'Georgia', serif;
+}
+
+.newspaper-featured ul {
+  list-style: none;
+  padding: 0;
+}
+
+.newspaper-featured li {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 6px;
+  padding-left: 0.5em;
+  position: relative;
+}
+
+.newspaper-footer {
+  text-align: center;
+  color: #a89c8a;
+  font-size: 0.98rem;
+  margin-top: 24px;
+}
