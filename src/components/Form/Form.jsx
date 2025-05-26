@@ -8,7 +8,7 @@ const Form = () => {
     Lead: "",
     Body: "",
     Author: "",
-    Date: new Date().toLocaleDateString('es-ES'),
+    Date: new Date().toLocaleDateString('en-US'),
   };
 
   const navigate = useNavigate();
@@ -25,16 +25,16 @@ const Form = () => {
 
   const validateForm = () => {
     if (!data.Headline || !data.Lead || !data.Body) {
-      setMessage("Todos los campos obligatorios deben estar completos.");
+      setMessage("All required fields must be completed.");
       setBtnDisabled(true);
     } else if (data.Headline.length < 3) {
-      setMessage("El titular debe tener al menos 3 caracteres.");
+      setMessage("The headline must have at least 3 characters.");
       setBtnDisabled(true);
     } else if (data.Lead.length < 3) {
-      setMessage("La entradilla debe tener al menos 3 caracteres.");
+      setMessage("The lead must have at least 3 characters.");
       setBtnDisabled(true);
     } else if (data.Body.length < 10) {
-      setMessage("El cuerpo debe tener al menos 10 caracteres.");
+      setMessage("The body must have at least 10 characters.");
       setBtnDisabled(true);
     } else {
       setMessage("");
@@ -52,7 +52,7 @@ const Form = () => {
     localStorage.setItem("news", JSON.stringify(data));
     setData(initialValue);
     swal(
-      "¡Noticia publicada!",
+      "News published!",
       `${data.Headline}\n${data.Lead}\n${data.Body}`,
       "success"
     );
@@ -63,51 +63,51 @@ const Form = () => {
 
   return (
     <form className="news-form" onSubmit={handleSubmit}>
-      <h2 className="form-title">Publicar nueva noticia</h2>
-      <label htmlFor="Headline">Titular*</label>
+      <h2 className="form-title">Publish a News Article</h2>
+      <label htmlFor="Headline">Headline*</label>
       <input
         type="text"
         id="Headline"
         name="Headline"
-        placeholder="Ej: Descubren nueva especie en la Amazonía"
+        placeholder="E.g.: New species discovered in the Amazon"
         onChange={handleInputChange}
         value={data.Headline}
         autoComplete="off"
       />
 
-      <label htmlFor="Lead">Entradilla*</label>
+      <label htmlFor="Lead">Lead*</label>
       <input
         type="text"
         id="Lead"
         name="Lead"
-        placeholder="Resumen breve de la noticia"
+        placeholder="Brief summary of the news"
         onChange={handleInputChange}
         value={data.Lead}
         autoComplete="off"
       />
 
-      <label htmlFor="Body">Cuerpo de la noticia*</label>
+      <label htmlFor="Body">Body*</label>
       <textarea
         id="Body"
         name="Body"
-        placeholder="Desarrolla aquí la noticia completa..."
+        placeholder="Write the full news article here..."
         onChange={handleInputChange}
         value={data.Body}
         rows={6}
       />
 
-      <label htmlFor="Author">Autor</label>
+      <label htmlFor="Author">Author</label>
       <input
         type="text"
         id="Author"
         name="Author"
-        placeholder="Nombre del periodista (opcional)"
+        placeholder="Journalist's name (optional)"
         onChange={handleInputChange}
         value={data.Author}
         autoComplete="off"
       />
 
-      <label htmlFor="Date">Fecha</label>
+      <label htmlFor="Date">Date</label>
       <input
         type="text"
         id="Date"
@@ -116,7 +116,7 @@ const Form = () => {
         readOnly
       />
 
-      <button type="submit" disabled={btnDisable}>Publicar noticia</button>
+      <button type="submit" disabled={btnDisable}>Publish news</button>
       {message && <p className="error-message">{message}</p>}
     </form>
   );

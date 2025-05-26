@@ -4,27 +4,27 @@ const Home = () => {
   return (
     <div className="newspaper-home">
       <header className="newspaper-header">
-        <h1 className="newspaper-title">El Diario Digital</h1>
-        <p className="newspaper-date">{new Date().toLocaleDateString('es-ES', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
+        <h1 className="newspaper-title">The Digital Daily</h1>
+        <p className="newspaper-date">{new Date().toLocaleDateString('en-US', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}</p>
         <hr className="newspaper-divider" />
       </header>
       <section className="newspaper-intro">
-        <h2>Bienvenido a El Diario Digital</h2>
+        <h2>Welcome to The Digital Daily</h2>
         <p>
-          Tu fuente confiable de noticias actualizadas, reportajes y análisis. Explora las últimas novedades nacionales e internacionales, economía, cultura, deportes y mucho más.
+          Your trusted source for up-to-date news, reports, and analysis. Explore the latest national and international headlines, economy, culture, sports, and much more.
         </p>
       </section>
       <section className="newspaper-featured">
-        <h3>Noticias Destacadas</h3>
+        <h3>Featured News</h3>
         <ul>
-          <li>✔️ Última hora: Mantente informado con las noticias más recientes.</li>
-          <li>✔️ Reportajes exclusivos y entrevistas.</li>
-          <li>✔️ Opinión y análisis de expertos.</li>
+          <li>✔️ Breaking news: Stay informed with the latest updates.</li>
+          <li>✔️ Exclusive reports and interviews.</li>
+          <li>✔️ Expert opinion and analysis.</li>
         </ul>
       </section>
       <footer className="newspaper-footer">
         <hr className="newspaper-divider" />
-        <p>© {new Date().getFullYear()} El Diario Digital. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} The Digital Daily. All rights reserved.</p>
       </footer>
     </div>
   )
