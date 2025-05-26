@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from 'sweetalert2';
 import "./Form.scss";
 
 const Form = () => {
@@ -51,7 +52,7 @@ const Form = () => {
     e.preventDefault();
     localStorage.setItem("news", JSON.stringify(data));
     setData(initialValue);
-    swal(
+    Swal.fire(
       "News published!",
       `${data.Headline}\n${data.Lead}\n${data.Body}`,
       "success"
